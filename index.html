@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive, interactive calculator web app built with vanilla JavaScript, HTML5, and CSS3. Features dynamic arithmetic operations and a mobile-friendly UI.">
+    <title>Little Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="calculator.webp" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Hegarty&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calContainer">
+        <div class="header">
+            <h1>Little Smart <span>Calculator</span></h1>
+        </div>
+        <div class="function">
+            <div class="inputs">
+                <input type="number" id="numOne" placeholder="Input your value">
+                <input type="number" id="numTwo" placeholder="Input second value">
+            </div>
+            <div class="btns">
+                <button onclick="plus()">➕</button>
+                <button onclick="multiply()">✖️</button>
+                <button onclick="subtract()">➖</button>
+                <button onclick="divide()">➗</button>
+                <button onclick="clearAll()" title="Clear all">🔄️</button>
+            </div>
+        </div>
+        <div class="output">
+            <p id="resultAnswer">"Type in your first value and second value then use the function key"</p>
+            <p id="answer"></p>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    let numberOne = document.getElementById("numOne")
+    let numberTwo = document.getElementById("numTwo")
+    let result = document.getElementById("resultAnswer")
+    let realAnswer = document.getElementById("answer")
+
+    function plus() {
+        let valOne = +numberOne.value;
+        let valTwo = +numberTwo.value;
+        let total = valOne + valTwo;
+
+        numberOne.value = "";
+        numberTwo.value = "";
+        result.innerHTML = "Answer is:";
+        realAnswer.style.backgroundColor = '#fff';
+        
+        realAnswer.innerHTML = total;
+    }
+
+    function multiply() {
+        let valOne = +numberOne.value;
+        let valTwo = +numberTwo.value;
+        let total = valOne * valTwo;
+         
+        numberOne.value = "";
+        numberTwo.value = "";
+        result.innerHTML = "Answer is:";
+        realAnswer.style.backgroundColor = '#fff';
+
+        realAnswer.innerHTML = total;
+    }
+
+    function subtract() {
+        let valOne = +numberOne.value;
+        let valTwo = +numberTwo.value;
+        let total = valOne - valTwo;
+
+        numberOne.value = "";
+        numberTwo.value = "";
+        result.innerHTML = "Answer is:";
+        realAnswer.style.backgroundColor = '#fff';
+
+        realAnswer.innerHTML = total;
+    }
+
+    function divide() {
+        let valOne = +numberOne.value;
+        let valTwo = +numberTwo.value;
+        let total = valOne / valTwo;
+
+        numberOne.value = "";
+        numberTwo.value = "";
+        result.innerHTML = "Answer is:";
+        realAnswer.style.backgroundColor = '#fff';
+
+        realAnswer.innerHTML = total.toFixed(2);
+    }
+
+    function clearAll() {
+        result.innerHTML = "Type in your first value and second value then use the function key";
+        realAnswer.innerHTML = "";
+        realAnswer.style.backgroundColor = 'transparent';
+        // numberOne.value = "";
+        // numberTwo.value = "";
+    }
+</script>

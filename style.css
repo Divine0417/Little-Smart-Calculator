@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(to right, #c69242, #c7822f, #98731d);
+    font-family: "Space Grotesk", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.calContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    width: 90%;
+    max-width: 400px;
+}
+.header {   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 200px;   
+    background-color: #bc8f8f;
+    border: 2px solid #adff2f;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.703);
+}
+.header h1 {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 28px;
+    text-align: center;
+}
+h1 span {
+    color: #0000ff;
+    display: block;
+}
+.function {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 400px;
+}
+.inputs {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+input {
+    padding: 1em;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid grey;
+    outline: none;
+    width: 100%;
+    font-family: "Space Grotesk", sans-serif;
+}
+.btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    border: 1px solid wheat;
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+    padding: 1em;
+    gap: 5px;
+}
+button {
+    padding: .5em;
+    border: 1px solid #e1e1e167;
+    border-radius: 8px;
+    background: none;
+    font-size: 20px;
+    transition: all 0.2s ease; 
+    cursor: pointer;
+}
+button:last-child {
+    background-color: #ff0101;
+}
+button:hover {
+    background-color: #ffffff45;
+    transform: scale(0.9);
+}
+.output {
+    text-align: center;
+}
+#answer {
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 1em;
+    font-size: 24px;
+    font-weight: 900;
+    min-height: 60px;
+    transition: 0.3s;
+}
